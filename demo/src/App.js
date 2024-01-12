@@ -11,15 +11,18 @@ import Showdata from './Showdata';
 import Render from './Render';
 import Renderex from './Renderex';
 import Registration from './Registration';
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import Table from './Table';
 
 function App() {
   return (
     <div className="App">
-    <Showdata/>
+    {/*<Showdata/>
     <Render/>
-    <Renderex/>
-    <Registration/>
+  <Renderex/>*/}
+    {/*<Registration/>*/}
+    <Table/>
     </div>
   )
 }

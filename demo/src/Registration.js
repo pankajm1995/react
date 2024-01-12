@@ -23,7 +23,7 @@ function Registration()
         <div className="App">
         <form onSubmit={getData}>
             <input type="text" placeholder="Enter Your Name" onChange={userData}></input>{err?<span>User Name not valid</span>:""}<br/><br/>
-            <input type="password" placeholder="Enter Your Password" onChange={passData}></input><br/><br/>
+            <input type="password" placeholder="Enter Your Password" ></input><br/><br/>
             <Button variant="success">Success</Button>{' '}
         </form>
         </div>
