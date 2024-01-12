@@ -6,20 +6,23 @@ function Table()
     ]
     return(
        <div>
-                <h1>Array List using map function</h1>
+                <h1 style={{color:"purple"}}>Array List using map function</h1>
                    <div>
-                   <table border="3px">
+                   <table border="7px 5px 1px" color="yellow" cellSpacing="13px"cellPadding="5px" className="App" style={{backgroundColor:"violet"}}>
                    {
                        arr.map((items)=>
                        <div>
                        <tr>
                        <td>Name</td>
-                       <td>Last Name</td>
+                       <td>LastName</td>
                        <td>Contact</td>
                        <td>Email</td>
                        </tr>
                        <tr>
-                        <td>{items.name},{items.lastName},{items.contact},{items.email}</td>
+                        <td>{items.name}</td>
+                        <td>{items.lastName}</td>
+                        <td>{items.contact}</td>
+                        <td>{items.email}</td>
                        </tr>
                        </div>
                        )

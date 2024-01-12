@@ -21,7 +21,7 @@ function App() {
     {/*<Showdata/>
     <Render/>
   <Renderex/>*/}
-    {/*<Registration/>*/}
+    <Registration/>
     <Table/>
     </div>
   )
