@@ -27,7 +27,7 @@ function Registration()
         if(item.length<8)
         {
             setErrs(true)
-        }else if(item=="A" || item=="Z")
+        } if(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/)
         {
             setErrs(true)
         }
