@@ -13,20 +13,17 @@ import React from 'react';
 // import Registration from './Registration';
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Table from './Table';
-import BasicExample from './Tab';
-
-
+import Tables from './Table';
 
 function App() {
-  return (
+  return (                            
     <div className="App">
     { /*<Showdata/>
    <Render/>
   <Renderex/>
     <Registration/>
   <Table/>*/}
-    <BasicExample/>
+    <Tables/>
     </div>
   )
 }

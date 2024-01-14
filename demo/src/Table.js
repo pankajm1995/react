@@ -1,37 +1,38 @@
+            import Table from 'react-bootstrap/Table';
 
-function Table()
-{
-    const arr=[
-        {name:"Pankaj",lastName:"Maurya",contact:+916391754931,email:"pankaj525@gamil.com"}
-    ]
-    return(
-       <div>
-                <h1 style={{color:"purple"}}>Array List using map function</h1>
-                   <div>
-                   <table border="7px 5px 1px" color="yellow" cellSpacing="13px"cellPadding="5px" className="App" style={{backgroundColor:"violet"}}>
-                   {
-                       arr.map((items)=>
-                       <div>
-                       <tr>
-                       <td>Name</td>
-                       <td>LastName</td>
-                       <td>Contact</td>
-                       <td>Email</td>
-                       </tr>
-                       <tr>
-                        <td>{items.name}</td>
-                        <td>{items.lastName}</td>
-                        <td>{items.contact}</td>
-                        <td>{items.email}</td>
-                       </tr>
-                       </div>
-                       )
-                       
-                   }
-               </table>
-                   
-       </div>
-      </div>
-    )
-}
-export default Table;
+            function Tables() {
+                const data = [
+                    { id: 101, name: "Pankaj", city: "surat" },
+                    { id: 102, name: "Rinku", city: "Vesu" },
+                    { id: 103, name: "Alok", city: "Varachha" },
+                    { id: 104, name: "Keyur", city: "Dindoli" },
+                ]
+
+                return (
+                    <Table striped bordered hover>
+
+
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>City</th>
+                            </tr>
+                        </thead>
+                        {
+                            data.map((callback) =>
+                                
+                                    <tbody>
+                                        <tr>
+                                            <td>{callback.id}</td>
+                                            <td>{callback.name}</td>
+                                            <td>{callback.city}</td>
+                                        </tr>
+                                    </tbody>
+                            )
+                        }
+                    </Table>
+                );
+            }
+
+            export default Tables;
