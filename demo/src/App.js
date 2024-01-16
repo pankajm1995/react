@@ -15,6 +15,8 @@ import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Tables from './Table';
 
+import Tloop from './Tloop';
+
 function App() {
   return (                            
     <div className="App">
@@ -24,6 +26,7 @@ function App() {
     <Registration/>
   <Table/>*/}
     <Tables/>
+    <Tloop/>
     </div>
   )
 }
