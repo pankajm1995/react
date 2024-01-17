@@ -16,6 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Tables from './Table';
 
 import Tloop from './Tloop';
+import Frag1 from './Frag1';
 
 function App() {
   return (                            
@@ -27,6 +28,7 @@ function App() {
   <Table/>*/}
     <Tables/>
     <Tloop/>
+    <Frag1/>
     </div>
   )
 }
