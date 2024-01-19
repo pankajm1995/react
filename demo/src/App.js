@@ -1,8 +1,8 @@
 
 import './App.css';
-import Parent from './Parent';
-import Hook from './Hook';
-import React from 'react';
+// import Parent from './Parent';
+// import Hook from './Hook';
+// import React from 'react';
 // import UseEffect from './UseEffect';
 // import Form from './Form';
 // import Showdata from './Showdata';
@@ -11,26 +11,27 @@ import React from 'react';
 // import Render from './Render';
 // import Renderex from './Renderex';
 // import Registration from './Registration';
-import { Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Tables from './Table';
+// import { Button } from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import Tables from './Table';
 
-import Tloop from './Tloop';
-import Frag1 from './Frag1';
+// import Tloop from './Tloop';
+// import Frag1 from './Frag1';
+import React,{useState} from 'react';
+import Col from './Parentcall';
 
 function App() {
-  return (                            
-    <div className="App">
-    { /*<Showdata/>
-   <Render/>
-  <Renderex/>
-    <Registration/>
-  <Table/>*/}
-    <Tables/>
-    <Tloop/>
-    <Frag1/>
-    </div>
-  )
+  const [data,setData]=useState("")
+
+    const updateData=()=>
+        {
+                setData("pankaj")
+        }
+    return(
+        <div> 
+            <Col name={data} getData={updateData}/>
+        </div>
+    )
 }
 
 export default App;
