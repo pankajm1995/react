@@ -17,11 +17,16 @@ import './App.css';
 
 // import Tloop from './Tloop';
 // import Frag1 from './Frag1';
-import React,{useState} from 'react';
-import Col from './Parentcall';
+// import React,{useState} from 'react';
+// import Col from './Parentcall';
+
+// import Localstorage from './Localstorage';
+import high from './Hoc';
 
 function App() {
-  const [data,setData]=useState("")
+    return(
+    <div>
+  {/*{const [data,setData]=useState("")
 
     const updateData=()=>
         {
@@ -31,7 +36,10 @@ function App() {
         <div> 
             <Col name={data} getData={updateData}/>
         </div>
-    )
+    )}*/}
+
+<high/>
+</div>)
 }
 
 export default App;
