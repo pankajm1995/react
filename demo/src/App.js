@@ -21,7 +21,10 @@ import './App.css';
 // import Col from './Parentcall';
 
 // import Localstorage from './Localstorage';
-import high from './Hoc';
+// import high from './Hoc';
+import Session from './Sessionstorage';
+import Control from './Control';
+import Uncontrol from './Uncontrol';
 
 function App() {
     return(
@@ -38,7 +41,9 @@ function App() {
         </div>
     )}*/}
 
-<high/>
+<Session/>
+<Control/>
+<Uncontrol/>
 </div>)
 }
 
