@@ -22,29 +22,29 @@ import './App.css';
 
 // import Localstorage from './Localstorage';
 // import high from './Hoc';
-import Session from './Sessionstorage';
-import Control from './Control';
-import Uncontrol from './Uncontrol';
-
+// import Session from './Sessionstorage';
+// import Control from './Control';
+// import Uncontrol from './Uncontrol';
+// import React from 'react';
+import Home from './Component/Home';
+import About from './Component/About';
+import { BrowserRouter, Link, Routes, Route } from "react-router-dom"
 function App() {
-    return(
-    <div>
-  {/*{const [data,setData]=useState("")
-
-    const updateData=()=>
-        {
-                setData("pankaj")
-        }
-    return(
-        <div> 
-            <Col name={data} getData={updateData}/>
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <h1>ROuter</h1>
+                <Link to="Home">Home</Link><br />
+                <Link to="About">About</Link><br />
+                <Routes>
+                    <Route path="/Home" element={<Home />}>Home</Route>
+                    <Route path="/About" element={<About />}>Home</Route>
+                </Routes>
+                <Link to="Home">Home</Link><br />
+                <Link to="About">About</Link><br />
+            </BrowserRouter>
         </div>
-    )}*/}
-
-<Session/>
-<Control/>
-<Uncontrol/>
-</div>)
+    )
 }
 
 export default App;
