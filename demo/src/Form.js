@@ -13,6 +13,7 @@ function Form()
         <h1>Get Data</h1>
         <h1>{data}</h1>
         <input type="text" onChange={getData}></input>
+        <h3 style={{color: "green"}}>========Form End============</h3>
         </div>
     )
 }

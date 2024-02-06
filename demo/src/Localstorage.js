@@ -11,9 +11,11 @@ function Localstorage()
     }
     console.log(localStorage.getItem("initkey","****"))
     return(
-        <div>
+        <div className="App">
+            <h1>Localstorage</h1>
             <input type='text' ref={data}></input>
             <button onClick={updateData}>Click Here</button>
+            <h3 style={{color: "green"}}>========Localstorage End============</h3>
         </div>
     )
 }

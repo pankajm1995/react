@@ -9,6 +9,8 @@
                 ]
 
                 return (
+                    <div className='App'>
+                    
                     <Table striped bordered hover>
 
 
@@ -32,6 +34,8 @@
                             )
                         }
                     </Table>
+                    <h3 style={{color: "green"}}>========TAble End============</h3>
+                    </div>
                 );
             }
 

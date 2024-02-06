@@ -13,10 +13,12 @@ function Session()
         sessionStorage.removeItem('data');
     }
     return(
-        <div>
+        <div className="App">
+            <h1>Sessionstorage</h1>
             <h1>{value}</h1>
             <button onClick={updateData}>Set Value</button>
             <button onClick={removeData}>Remove Value</button>
+            <h3 style={{color: "green"}}>========sessionStorage End============</h3>
         </div>
     )
 }

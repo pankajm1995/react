@@ -7,7 +7,7 @@ function Rouetr()
     return(
         <div className="App">
             <BrowserRouter>
-                <h1>ROuter</h1>
+                <h1>Router</h1>
                 <Link to="Home">Home</Link><br />
                 <Link to="About">About</Link><br />
                 <Routes>
@@ -17,7 +17,9 @@ function Rouetr()
                 <Link to="Home">Home</Link><br />
                 <Link to="About">About</Link><br />
             </BrowserRouter>
+            <h3 style={{color: "green"}}>========Router End============</h3>
         </div>
+
     )
 }
 export default Rouetr;
