@@ -17,7 +17,7 @@ import './App.css';
 
 // import Tloop from './Tloop';
 // import Frag1 from './Frag1';
-// import React,{useState} from 'react';
+import React, { useState } from 'react';
 // import Col from './Parentcall';
 
 // import Localstorage from './Localstorage';
@@ -26,23 +26,41 @@ import './App.css';
 // import Control from './Control';
 // import Uncontrol from './Uncontrol';
 // import React from 'react';
-import Home from './Component/Home';
-import About from './Component/About';
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom"
+// import Home from './Component/Home';
+// import About from './Component/About';
+// import { BrowserRouter, Link, Routes, Route } from "react-router-dom"
+import './Crud.css';
 function App() {
+    const [name, setName] = useState("");
+    const [allData, setAllData] = useState([])
+
+    const handled = () => {
+        if (name.length !== 0) {
+            setAllData(newData => [...newData, name]);
+            setName("");
+        }
+    }
+    const handleDelete=(index)=>
+
+    {
+        allData.splice(index,1);
+        setAllData([...allData])
+    }
     return (
         <div className="App">
-            <BrowserRouter>
-                <h1>ROuter</h1>
-                <Link to="Home">Home</Link><br />
-                <Link to="About">About</Link><br />
-                <Routes>
-                    <Route path="/Home" element={<Home />}>Home</Route>
-                    <Route path="/About" element={<About />}>Home</Route>
-                </Routes>
-                <Link to="Home">Home</Link><br />
-                <Link to="About">About</Link><br />
-            </BrowserRouter>
+            <h1>CRUD APPLICATION</h1>
+            <input type="text" value={name} onChange={(e) => setName(e.target.value)}></input>
+            <button onClick={handled}>Add Data</button>
+            {
+                allData.map((val) =>
+                    <div>
+                        <h1>{val}</h1>
+                        <button>Edit</button>
+                        <button onClick={handleDelete}>Delete</button>
+                    </div>
+                )
+
+            }
         </div>
     )
 }
