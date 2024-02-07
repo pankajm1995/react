@@ -3,6 +3,8 @@ function crud()
 {
     const [name, setName] = useState("");
     const [allData, setAllData] = useState([])
+    const [show,setShow]=useState(false)
+    const[editText,seteditText]=useState()
 
     const handled = () => {
         if (name.length !== 0) {
@@ -13,24 +15,35 @@ function crud()
     const handleDelete=(index)=>
 
     {
-       
-        allData.splice(index,allData[index,1].length)
-        setAllData([...allData])
-        // setAllData(allData.filter((item)=>item.index!=index));
+       allData.splice(index ,1);
+       setAllData([...allData]);
        
         
+    }
+    const handleEdit=(i)=>
+    {
+        setName(allData[i]);
+        setShow(true)
+        seteditText(i)
+    }
+    const handleupdate=()=>
+    {
+        allData.splice(editText,1,name)
+        setAllData([...allData])
+        setShow(false)
+        setName("")
     }
     return (
         <div className="App">
             <h1>CRUD APPLICATION</h1>
             <input type="text" value={name} onChange={(e) => setName(e.target.value)}></input>
-            <button onClick={handled}>Add Data</button>
+            {!show?<button onClick={handled}>Add Data</button>:<button onClick={handleupdate}>update</button>}
             {
-                allData.map((val) =>
+                allData.map((val,i) =>
                     <div>
                         <h1>{val}</h1>
-                        <button>Edit</button>
-                        <button onClick={handleDelete}>Delete</button>
+                        <button onClick={()=>handleEdit(i)}>Edit</button>
+                        <button onClick={()=>handleDelete(i)}>Delete</button>
                     </div>
                 )
 
