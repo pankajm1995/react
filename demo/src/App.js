@@ -17,7 +17,7 @@ import './App.css';
 
 // import Tloop from './Tloop';
 // import Frag1 from './Frag1';
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 // import Col from './Parentcall';
 
 // import Localstorage from './Localstorage';
@@ -29,9 +29,24 @@ import React, { useState } from 'react';
 // import Home from './Component/Home';
 // import About from './Component/About';
 // import { BrowserRouter, Link, Routes, Route } from "react-router-dom"
-import './Crud.css';
+// import './Crud.css';
+import Home from './Component/Home';
+import About from './Component/About';
+import Error from './Component/Error';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 function App() {
-    
+    return(
+        <div className="App">
+        <BrowserRouter>
+            <h1>Router</h1>
+            <Routes>
+                <Route path="/Home" element={<Home />}>Home</Route>
+                <Route path="/About" element={<About />}>Home</Route>
+                <Route path="/*" element={<Error/>}>Error</Route>
+            </Routes>     
+    </BrowserRouter>
+    </div>
+    )
 }
 
 export default App;
