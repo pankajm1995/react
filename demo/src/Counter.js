@@ -1,6 +1,6 @@
 import { React, useState } from 'react'
  
-export default function Counter() {
+ function Counter() {
   const [counter, setCounter] = useState(0);
  
   //increase counter
@@ -19,7 +19,7 @@ export default function Counter() {
   }
  
   return (
-    <div className="counter">
+    <div className="App">
       <h1>React Counter</h1>
       <span className="counter__output">{counter}</span>
       <div className="btn__container">
@@ -30,3 +30,4 @@ export default function Counter() {
     </div>
   );
 }
+export default Counter;
