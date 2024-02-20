@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Routercss from './Routercss';
 import App from './App';
-
+import Nestednav from './Nestednav';
 
 import reportWebVitals from './reportWebVitals';
 // import Counter from './Counter';
@@ -13,6 +13,7 @@ root.render(
   <React.StrictMode>
  <Routercss/>
  <App/>
+ <Nestednav/>
   </React.StrictMode>
 );
 
