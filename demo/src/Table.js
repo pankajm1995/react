@@ -1,4 +1,5 @@
-            import Table from 'react-bootstrap/Table';
+           // import  this file in app.js
+           import Table from 'react-bootstrap/Table';
 
             function Tables() {
                 const data = [
