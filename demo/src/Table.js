@@ -11,14 +11,14 @@
                 return (
                     <div className='App'>
                     
-                    <Table striped bordered hover>
+                    <Table striped bordered hover style={{border:"3px  solid black",width:"550px",height:"300px"}}>
 
 
-                        <thead>
+                        <thead >
                             <tr>
-                                <th>Id</th>
-                                <th>Name</th>
-                                <th>City</th>
+                                <th style={{border:"2px  solid black"}}>Id</th>
+                                <th style={{border:"2px  solid black"}}>Name</th>
+                                <th style={{border:"2px  solid black"}}>City</th>
                             </tr>
                         </thead>
                         {
@@ -26,9 +26,9 @@
                                 
                                     <tbody>
                                         <tr>
-                                            <td>{callback.id}</td>
-                                            <td>{callback.name}</td>
-                                            <td>{callback.city}</td>
+                                            <td style={{border:"2px  solid black"}}>{callback.id}</td>
+                                            <td style={{border:"2px  solid black"}}>{callback.name}</td>
+                                            <td style={{border:"2px  solid black"}}>{callback.city}</td>
                                         </tr>
                                     </tbody>
                             )
